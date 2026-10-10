@@ -61,11 +61,12 @@ img[src^="data:image/png"]{mix-blend-mode:normal!important}
   <div class="grid" id="grid"></div>
 </main>
 
+<script src="config.js"></script>
 <script>
 /* ===== EDITE AQUI =====
    whatsapp: número com DDD (o 55 é adicionado sozinho). Troque pelo número real.
    tamanhos: [] para produtos sem tamanho. img: "" usa a logo como imagem. */
-const CONFIG = { whatsapp: "11999998888" };
+const CONFIG = { whatsapp: (window.LOJA && window.LOJA.whatsapp) || "11999998888" };
 const CATEGORIAS = ["Peças de roupa", "Bottons e Chaveiros"];
 const PRODUTOS = [
   { id: "camisa-vermelha", nome: "Camisa Elektron", sub: "Modelo vermelho", cat: "Peças de roupa", preco: 56,
